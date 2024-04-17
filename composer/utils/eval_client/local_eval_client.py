@@ -23,6 +23,7 @@ class LocalEvalClient(EvalClient):
     """Utility for creating a client for and invoking local evaluations."""
 
     def invoke(self, payload: List[List[List[Dict[str, str]]]]) -> List[List[List[bool]]]:
+        print("payload: ", payload)
         """Invoke a batch of provided payloads for code evaluations."""
         ret = []
         for prompt_group in payload:
